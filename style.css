@@ -55,9 +55,37 @@ body {
   padding: 3rem;
   margin: 0 1.5rem;
 }
+
 .avatar {
   border-radius: 50%;
   border: 10px solid #2a2a72;
   height: 150px;
   width: 150px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
 }
