@@ -10,7 +10,9 @@ async function getUser(username) {
 
     createUserCard(data);
   } catch (err) {
-    console.log(err);
+    if (err.response.status == 404) {
+      createErrorCard("No profile with this username");
+    }
   }
 }
 
@@ -39,6 +41,15 @@ function createUserCard(user) {
         </div>
       </div>
 
+  `;
+  main.innerHTML = cardHTML;
+}
+
+function createErrorCard(msg) {
+  const cardHTML = `
+  <div class="card">
+  <h1>${msg}</h1>
+  </div>
   `;
   main.innerHTML = cardHTML;
 }
